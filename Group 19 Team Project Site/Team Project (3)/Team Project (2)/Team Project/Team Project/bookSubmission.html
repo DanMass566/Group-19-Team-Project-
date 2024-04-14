@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SentinelSafe Technologies</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="demoScript.js"></script>
+</head>
+<body>
+
+<header>
+    <h1>SentinelSafe Technologies</h1>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="contactUs.html">Contact Us</a>
+    <a href="demo.html">Book a Demo</a>
+    <a href="login.html">Login</a>
+</nav>
+
+<div class="confirmation-container">
+    <h2>Booking Confirmation</h2>
+    <p>Your booking has been confirmed. Thank you for choosing our service!</p>
+
+    <div class="confirmation-details">
+        <!-- JavaScript will populate these elements with the form values -->
+        <p><strong>Name:</strong> <span id="fname"></span></p>
+        <p><strong>Email:</strong> <span id="email"></span></p>
+        <p><strong>Address:</strong> <span id="adr"></span></p>
+        <p><strong>City:</strong> <span id="city"></span></p>
+        <p><strong>County:</strong> <span id="county"></span></p>
+        <p><strong>Eircode:</strong> <span id="eircode"></span></p>
+        <p><strong>Date:</strong> <span id="datePicker"></span></p>
+    </div>
+   
+    <p>For any inquiries, please contact our support team <a href="mailto:sentinelsafetechnologies@gmail.com">here</a>.</p>
+
+
+    <a href="index.html" class="button">Back to Home</a>
+</div>
+
+<script>
+    // get form data from localStorage
+    var formData = JSON.parse(localStorage.getItem("formData"));
+    // put in form data
+    document.getElementById("fname").textContent = formData.fname;
+    document.getElementById("email").textContent = formData.email;
+    document.getElementById("adr").textContent = formData.adr;
+    document.getElementById("city").textContent = formData.city;
+    document.getElementById("county").textContent = formData.county;
+    document.getElementById("eircode").textContent = formData.eircode;
+    document.getElementById("datePicker").textContent = formData.datePicker;
+  </script>
+</body>
+</html>
